@@ -7,7 +7,7 @@ import {register, reset} from "../features/auth/authSlice"; //  This is Gonna Co
 import Spinner from "../components/Spinner";
 
 function Register() {
-  const [formData, setformData] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     number: "",
     email: "",
@@ -38,7 +38,7 @@ function Register() {
   }, [user, isError, isSuccess, message, navigate, dispatch]); // It will take a Bunch of dependencies   // It will Fireoff User Effect if any of this Changes
 
   const onChange = (e) => {
-    setformData((prevState) => ({
+    setFormData((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
     })); // We are setting the Form Data to the Object

@@ -7,13 +7,13 @@ function Header() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const {user} = useSelector((state) => state.auth);
+  // const {user} = useSelector((state) => state.auth);
 
   // Either Write Like Below Code or Write like Above Code [ mostly for one statement Above Code is Preffered ]
 
-  // const {user} = useSelector((state) => {
-  //   return state.auth;
-  // });
+  const {user} = useSelector((state) => {
+    return state.auth;
+  });
 
   const onLogout = () => {
     dispatch(logout());
